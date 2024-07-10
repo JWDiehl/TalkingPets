@@ -22,6 +22,7 @@ public class MainApplication {
         //Iterate through array list of our pet classes
         for (int i = 0; i < numberOfPets; i++) {
 
+            //Creating pets based on user input
             System.out.println("Enter pet #" + (i + 1) + " type (Dog, Cat, Bunny):");
             String typeOfPet = scanner.nextLine().toLowerCase();
 
@@ -43,14 +44,18 @@ public class MainApplication {
                     pet = new Pet(petName);
                     break;
             }
+
+            //Adding pets to the array list
             petList.add(pet);
         }
 
+        //Displaying pets and their speech via speak method
         System.out.println("\nList of pets:");
         for (Pet pet : petList) {
             System.out.println(pet.getName() + ": " + pet.speak());
         }
 
+        //Closing scanner
         scanner.close();
 
     }
