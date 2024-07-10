@@ -7,6 +7,21 @@ import static org.junit.Assert.*;
 
 public class CatTest {
 
+
+    @Test
+    public void testCatConstructor() {
+        String name = "Jaclyn";
+        Object cat = new Cat(name);
+        Assert.assertTrue(cat instanceof Cat);
+    }
+
+    @Test
+    public void testCatIsPet() {
+        String name = "Sophia";
+        Pet cat = new Cat(name);
+        Assert.assertTrue(cat instanceof Cat);
+    }
+
     @Test
     public void testCatSpeak() {
 

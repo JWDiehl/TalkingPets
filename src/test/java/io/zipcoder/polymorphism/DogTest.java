@@ -47,4 +47,17 @@ public class DogTest {
 
     }
 
+    @Test
+    public void testDogConstructor() {
+        String name = "Maxey";
+        Object dog = new Dog(name);
+        Assert.assertTrue(dog instanceof Dog);
+    }
+
+    @Test
+    public void testDogIsPet() {
+        String name = "Maxey";
+        Pet dog = new Dog(name);
+        Assert.assertTrue(dog instanceof Dog);
+}
 }
